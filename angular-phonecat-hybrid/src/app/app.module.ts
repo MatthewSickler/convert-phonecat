@@ -6,13 +6,15 @@ import { UpgradeModule } from '@angular/upgrade/static';
 
 import { AppComponent } from './app.component';
 import {ExampleAngularComponent} from './example-angular.component';
+import {TabletComponent} from './tablet.component';
 
 import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExampleAngularComponent
+    ExampleAngularComponent,
+    TabletComponent
   ],
   imports: [
     BrowserModule,
