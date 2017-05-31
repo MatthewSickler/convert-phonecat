@@ -11,6 +11,7 @@ class HybridUrlHandlingStrategy implements UrlHandlingStrategy {
 }
 
 const routes: Routes = [
+  { path: '', redirectTo: '/tablets', pathMatch: 'full' },
   { path: 'tablets',  component: TabletComponent }
 ];
 
