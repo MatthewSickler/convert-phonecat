@@ -5,5 +5,5 @@ import {Component} from '@angular/core';
 })
 
 export class TabletComponent {
-  title: string = "Tablet Component using Angular Route!";
+  title: string = "Tablet Component using Angular Route (Outside of the Hybrid App)!";
 }
