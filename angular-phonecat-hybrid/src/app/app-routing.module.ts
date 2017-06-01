@@ -4,7 +4,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import {TabletComponent} from './tablet.component';
 
-class HybridUrlHandlingStrategy implements UrlHandlingStrategy {
+export class HybridUrlHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url: UrlTree) { return !url.toString().startsWith('/phones'); }
   extract(url: UrlTree) { return url; }
   merge(url: UrlTree, whole: UrlTree) { return url; }

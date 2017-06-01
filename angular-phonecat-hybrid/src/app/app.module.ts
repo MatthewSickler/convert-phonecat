@@ -7,6 +7,7 @@ import { UpgradeModule } from '@angular/upgrade/static';
 import { AppComponent } from './app.component';
 import {ExampleAngularComponent} from './example-angular.component';
 import {TabletComponent} from './tablet.component';
+import {AjsTestDirective} from './ajs-test.directive';
 
 import {AppRoutingModule} from './app-routing.module';
 
@@ -14,7 +15,8 @@ import {AppRoutingModule} from './app-routing.module';
   declarations: [
     AppComponent,
     ExampleAngularComponent,
-    TabletComponent
+    TabletComponent,
+    AjsTestDirective
   ],
   imports: [
     BrowserModule,
