@@ -3,15 +3,17 @@
 import {ExampleAngularComponent} from './../../app/example-angular.component';
 import {downgradeComponent} from '@angular/upgrade/static';
 declare var angular: angular.IAngularStatic;
+import {Phone, PhoneData} from './../core/phone/phone.service';
 
 class PhoneListController {
-  phones: any[];
+  phones: PhoneData[];
   orderProp: string;
-  query: string;
 
-  static $inject = ['Phone'];
-  constructor(Phone: any) {
-    this.phones = Phone.query();
+  static $inject = ['phoneService'];
+  constructor(phoneService: Phone) {
+    phoneService.query().subscribe(phones => {
+      this.phones = phones;
+    });
     this.orderProp = 'age';
   }
 }

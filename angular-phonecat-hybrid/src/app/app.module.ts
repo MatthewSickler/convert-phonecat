@@ -11,6 +11,8 @@ import {AjsTestDirective} from './ajs-test.directive';
 
 import {AppRoutingModule} from './app-routing.module';
 
+import {Phone} from './../app-ajs/core/phone/phone.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,7 @@ import {AppRoutingModule} from './app-routing.module';
     UpgradeModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [Phone],
   bootstrap: [AppComponent],
   entryComponents: [
     ExampleAngularComponent

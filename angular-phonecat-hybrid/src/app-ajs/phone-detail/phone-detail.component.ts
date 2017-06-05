@@ -1,15 +1,19 @@
 'use strict';
 
+declare var angular: angular.IAngularStatic;
+import { Phone, PhoneData } from '../core/phone/phone.service';
+
 class PhoneDetailController {
-  phone: any;
+  phone: PhoneData;
   mainImageUrl: string;
 
-  static $inject = ['$routeParams', 'Phone'];
+  static $inject = ['$routeParams', 'phoneService'];
 
-  constructor($routeParams: angular.route.IRouteParamsService, Phone: any) {
+  constructor($routeParams: angular.route.IRouteParamsService, phoneService: Phone) {
     let phoneId = $routeParams['phoneId'];
-    this.phone = Phone.get({phoneId}, (phone: any) => {
-      this.setImage(phone.images[0]);
+    phoneService.get(phoneId).subscribe(data => {
+      this.phone = data;
+      this.setImage(data.images[0]);
     });
   }
 
