@@ -42,11 +42,11 @@
     }, 
     "id": "samsung-transform", 
     "images": [
-        "src/app-ajs/img/phones/samsung-transform.0.jpg", 
-        "src/app-ajs/img/phones/samsung-transform.1.jpg", 
-        "src/app-ajs/img/phones/samsung-transform.2.jpg", 
-        "src/app-ajs/img/phones/samsung-transform.3.jpg", 
-        "src/app-ajs/img/phones/samsung-transform.4.jpg"
+        "src/assets/img/phones/samsung-transform.0.jpg", 
+        "src/assets/img/phones/samsung-transform.1.jpg", 
+        "src/assets/img/phones/samsung-transform.2.jpg", 
+        "src/assets/img/phones/samsung-transform.3.jpg", 
+        "src/assets/img/phones/samsung-transform.4.jpg"
     ], 
     "name": "Samsung Transform\u2122", 
     "sizeAndWeight": {

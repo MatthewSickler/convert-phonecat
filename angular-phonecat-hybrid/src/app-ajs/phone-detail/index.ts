@@ -1,1 +1,0 @@
-import './phone-detail.module';

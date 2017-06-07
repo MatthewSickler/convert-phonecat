@@ -42,12 +42,12 @@
     },
     "id": "motorola-xoom-with-wi-fi",
     "images": [
-        "src/app-ajs/img/phones/motorola-xoom-with-wi-fi.0.jpg",
-        "src/app-ajs/img/phones/motorola-xoom-with-wi-fi.1.jpg",
-        "src/app-ajs/img/phones/motorola-xoom-with-wi-fi.2.jpg",
-        "src/app-ajs/img/phones/motorola-xoom-with-wi-fi.3.jpg",
-        "src/app-ajs/img/phones/motorola-xoom-with-wi-fi.4.jpg",
-        "src/app-ajs/img/phones/motorola-xoom-with-wi-fi.5.jpg"
+        "src/assets/img/phones/motorola-xoom-with-wi-fi.0.jpg",
+        "src/assets/img/phones/motorola-xoom-with-wi-fi.1.jpg",
+        "src/assets/img/phones/motorola-xoom-with-wi-fi.2.jpg",
+        "src/assets/img/phones/motorola-xoom-with-wi-fi.3.jpg",
+        "src/assets/img/phones/motorola-xoom-with-wi-fi.4.jpg",
+        "src/assets/img/phones/motorola-xoom-with-wi-fi.5.jpg"
     ],
     "name": "Motorola XOOM\u2122 with Wi-Fi",
     "sizeAndWeight": {

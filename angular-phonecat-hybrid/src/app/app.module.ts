@@ -2,15 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { UpgradeModule } from '@angular/upgrade/static';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {ExampleAngularComponent} from './example-angular.component';
 import {TabletComponent} from './tablet.component';
 
 import {AppRoutingModule} from './app-routing.module';
-
-import {routeParamsProvider} from './ajs-upgraded-providers';
 
 import {Phone} from './phone.service';
 import {PhoneListComponent} from './phone-list.component';
@@ -33,12 +30,10 @@ import {CheckmarkPipe} from './checkmark.pipe';
     BrowserModule,
     FormsModule,
     HttpModule,
-    UpgradeModule,
     AppRoutingModule
   ],
   providers: [
-    Phone,
-    routeParamsProvider
+    Phone
   ],
   bootstrap: [AppComponent],
   entryComponents: [

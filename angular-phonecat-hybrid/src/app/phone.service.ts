@@ -4,9 +4,6 @@ import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-declare var angular: angular.IAngularStatic;
-import {downgradeInjectable} from '@angular/upgrade/static';
-
 export interface PhoneData {
   name: string;
   snippet: string;
@@ -18,15 +15,13 @@ export class Phone {
   constructor(private http: Http) {}
 
   query(): Observable<PhoneData[]> {
-    return this.http.get(`src/app-ajs/phones/phones.json`).map((res: Response) => res.json());
+    return this.http.get(`src/assets/phones/phones.json`).map((res: Response) => res.json());
   }
 
   get(id: string): Observable<PhoneData> {
-    return this.http.get(`src/app-ajs/phones/${id}.json`).map((res: Response) => res.json());
+    return this.http.get(`src/assets/phones/${id}.json`).map((res: Response) => res.json());
   }
 }
-
-angular.module('core.phone').factory('phoneService', downgradeInjectable(Phone));
 
 
 
