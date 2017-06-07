@@ -12,13 +12,15 @@ import {AjsTestDirective} from './ajs-test.directive';
 import {AppRoutingModule} from './app-routing.module';
 
 import {Phone} from './../app-ajs/core/phone/phone.service';
+import {PhoneListComponent} from './../app-ajs/phone-list/phone-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExampleAngularComponent,
     TabletComponent,
-    AjsTestDirective
+    AjsTestDirective,
+    PhoneListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import {Phone} from './../app-ajs/core/phone/phone.service';
   providers: [Phone],
   bootstrap: [AppComponent],
   entryComponents: [
-    ExampleAngularComponent
+    ExampleAngularComponent,
+    PhoneListComponent
   ]
 })
 
