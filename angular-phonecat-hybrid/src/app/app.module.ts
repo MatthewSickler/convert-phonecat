@@ -11,8 +11,13 @@ import {AjsTestDirective} from './ajs-test.directive';
 
 import {AppRoutingModule} from './app-routing.module';
 
+import {routeParamsProvider} from './ajs-upgraded-providers';
+
 import {Phone} from './../app-ajs/core/phone/phone.service';
 import {PhoneListComponent} from './../app-ajs/phone-list/phone-list.component';
+import {PhoneDetailComponent} from './../app-ajs/phone-detail/phone-detail.component';
+
+import {CheckmarkPipe} from './../app-ajs/core/checkmark/checkmark.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,9 @@ import {PhoneListComponent} from './../app-ajs/phone-list/phone-list.component';
     ExampleAngularComponent,
     TabletComponent,
     AjsTestDirective,
-    PhoneListComponent
+    PhoneListComponent,
+    PhoneDetailComponent,
+    CheckmarkPipe
   ],
   imports: [
     BrowserModule,
@@ -29,11 +36,15 @@ import {PhoneListComponent} from './../app-ajs/phone-list/phone-list.component';
     UpgradeModule,
     AppRoutingModule
   ],
-  providers: [Phone],
+  providers: [
+    Phone,
+    routeParamsProvider
+  ],
   bootstrap: [AppComponent],
   entryComponents: [
     ExampleAngularComponent,
-    PhoneListComponent
+    PhoneListComponent,
+    PhoneDetailComponent
   ]
 })
 
