@@ -35,13 +35,7 @@ import {CheckmarkPipe} from './checkmark.pipe';
   providers: [
     Phone
   ],
-  bootstrap: [AppComponent],
-  entryComponents: [
-    ExampleAngularComponent,
-    PhoneListComponent,
-    PhoneDetailComponent,
-    AjsTestComponent
-  ]
+  bootstrap: [AppComponent]
 })
 
 export class AppModule {}
