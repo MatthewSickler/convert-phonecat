@@ -3,16 +3,20 @@ import { RouterModule, Routes, UrlHandlingStrategy, UrlTree } from '@angular/rou
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import {TabletComponent} from './tablet.component';
+import{PhoneListComponent} from './phone-list.component';
 
 export class HybridUrlHandlingStrategy implements UrlHandlingStrategy {
-  shouldProcessUrl(url: UrlTree) { return !url.toString().startsWith('/phones'); }
+  shouldProcessUrl(url: UrlTree) {
+    return !url.toString().startsWith('/phones') || url.toString() === '/' || url.toString() === '/phones';
+  }
   extract(url: UrlTree) { return url; }
   merge(url: UrlTree, whole: UrlTree) { return url; }
 }
 
 const routes: Routes = [
-  { path: '', redirectTo: '/tablets', pathMatch: 'full' },
-  { path: 'tablets',  component: TabletComponent }
+  { path: '', redirectTo: '/phones', pathMatch: 'full' },
+  { path: 'tablets',  component: TabletComponent },
+  { path: 'phones', component: PhoneListComponent}
 ];
 
 @NgModule({

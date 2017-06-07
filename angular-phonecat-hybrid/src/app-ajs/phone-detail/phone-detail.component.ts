@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouteParams } from './../../app/ajs-upgraded-providers';
 
-import { Phone, PhoneData } from '../core/phone/phone.service';
+import { Phone, PhoneData } from './../../app/phone.service';
 
 declare var angular: angular.IAngularStatic;
 import { downgradeComponent } from '@angular/upgrade/static';
