@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { RouteParams } from './../../app/ajs-upgraded-providers';
+import { ActivatedRoute, Params } from '@angular/router';
 
-import { Phone, PhoneData } from './../../app/phone.service';
+import { Phone, PhoneData } from './phone.service';
 
-declare var angular: angular.IAngularStatic;
-import { downgradeComponent } from '@angular/upgrade/static';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'phone-detail',
@@ -15,11 +14,11 @@ export class PhoneDetailComponent {
   phone: PhoneData;
   mainImageUrl: string;
 
-  constructor(routeParams: RouteParams, phoneService: Phone) {
-    phoneService.get(routeParams['phoneId']).subscribe(phone => {
-      this.phone = phone;
-      this.setImage(phone.images[0]);
-    });
+  constructor(
+    private route: ActivatedRoute,
+    private phoneService: Phone
+  ) {
+    this.route.params.switchMap((params: Params) => phoneService.get(params['phoneId'])).subscribe(phone => {this.phone = phone; this.setImage(phone.images[0])});
   }
 
   setImage(imageUrl: string) {
@@ -27,12 +26,6 @@ export class PhoneDetailComponent {
   }
 
 }
-
-angular.module('phoneDetail')
-  .directive(
-    'phoneDetail',
-    downgradeComponent({component: PhoneDetailComponent}) as angular.IDirectiveFactory
-  );
 
 
 

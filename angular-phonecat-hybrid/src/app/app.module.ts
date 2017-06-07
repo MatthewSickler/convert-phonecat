@@ -14,10 +14,10 @@ import {routeParamsProvider} from './ajs-upgraded-providers';
 
 import {Phone} from './phone.service';
 import {PhoneListComponent} from './phone-list.component';
-import {PhoneDetailComponent} from './../app-ajs/phone-detail/phone-detail.component';
+import {PhoneDetailComponent} from './phone-detail.component';
 import {AjsTestComponent} from './ajsTestDirective';
 
-import {CheckmarkPipe} from './../app-ajs/core/checkmark/checkmark.pipe';
+import {CheckmarkPipe} from './checkmark.pipe';
 
 @NgModule({
   declarations: [

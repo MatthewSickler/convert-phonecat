@@ -4,10 +4,11 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import {TabletComponent} from './tablet.component';
 import{PhoneListComponent} from './phone-list.component';
+import{PhoneDetailComponent} from './phone-detail.component';
 
 export class HybridUrlHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url: UrlTree) {
-    return !url.toString().startsWith('/phones') || url.toString() === '/' || url.toString() === '/phones';
+    return url.toString().startsWith('/phones') || url.toString().startsWith('/tablets') || url.toString() === '/';
   }
   extract(url: UrlTree) { return url; }
   merge(url: UrlTree, whole: UrlTree) { return url; }
@@ -16,7 +17,8 @@ export class HybridUrlHandlingStrategy implements UrlHandlingStrategy {
 const routes: Routes = [
   { path: '', redirectTo: '/phones', pathMatch: 'full' },
   { path: 'tablets',  component: TabletComponent },
-  { path: 'phones', component: PhoneListComponent}
+  { path: 'phones', component: PhoneListComponent },
+  { path: 'phones/:phoneId', component: PhoneDetailComponent }
 ];
 
 @NgModule({
