@@ -7,7 +7,6 @@ import { UpgradeModule } from '@angular/upgrade/static';
 import { AppComponent } from './app.component';
 import {ExampleAngularComponent} from './example-angular.component';
 import {TabletComponent} from './tablet.component';
-import {AjsTestDirective} from './ajs-test.directive';
 
 import {AppRoutingModule} from './app-routing.module';
 
@@ -16,6 +15,7 @@ import {routeParamsProvider} from './ajs-upgraded-providers';
 import {Phone} from './../app-ajs/core/phone/phone.service';
 import {PhoneListComponent} from './../app-ajs/phone-list/phone-list.component';
 import {PhoneDetailComponent} from './../app-ajs/phone-detail/phone-detail.component';
+import {AjsTestComponent} from './../app-ajs/directives/ajsTestDirective';
 
 import {CheckmarkPipe} from './../app-ajs/core/checkmark/checkmark.pipe';
 
@@ -24,10 +24,10 @@ import {CheckmarkPipe} from './../app-ajs/core/checkmark/checkmark.pipe';
     AppComponent,
     ExampleAngularComponent,
     TabletComponent,
-    AjsTestDirective,
     PhoneListComponent,
     PhoneDetailComponent,
-    CheckmarkPipe
+    CheckmarkPipe,
+    AjsTestComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +44,8 @@ import {CheckmarkPipe} from './../app-ajs/core/checkmark/checkmark.pipe';
   entryComponents: [
     ExampleAngularComponent,
     PhoneListComponent,
-    PhoneDetailComponent
+    PhoneDetailComponent,
+    AjsTestComponent
   ]
 })
 

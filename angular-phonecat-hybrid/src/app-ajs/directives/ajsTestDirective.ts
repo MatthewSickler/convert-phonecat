@@ -1,11 +1,22 @@
-'use strict';
+import {Component} from '@angular/core';
 
-angular.module('testDirective', [])
+@Component ({
+  selector: 'ajs-test-directive-from-angular',
+  template: '<h4>{{title}}</h4>'
+})
 
-.component('testAjsDirective', {
-    template: `<h4>This is an AngularJS Component Directive served from a downgraded Angular Component!</h4>`,
-    controller: function() {
-      console.log("This is an AngularJS Component Directive served from a downgraded Angular Component!");
-    },
-    controllerAs: 'ctrl'
-});
+export class AjsTestComponent {
+  title: string = "This is an AngularJS Component Directive served from a downgraded Angular Component!";
+}
+
+// 'use strict';
+//
+// angular.module('testDirective', [])
+//
+// .component('testAjsDirective', {
+//     template: `<h4>This is an AngularJS Component Directive served from a downgraded Angular Component!</h4>`,
+//     controller: function() {
+//       console.log("This is an AngularJS Component Directive served from a downgraded Angular Component!");
+//     },
+//     controllerAs: 'ctrl'
+// });
